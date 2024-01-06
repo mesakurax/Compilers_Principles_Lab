@@ -1,0 +1,157 @@
+预处理后代码:
+int Max(int n1,int n2,int n3)  
+{
+    int temp=n1;
+    if(n2>temp)
+        n2=temp;
+    if(n3>temp)
+        n3=temp;
+    return temp;    
+}
+
+int main()
+{   
+    int i=0;
+    int sum=0;
+    while(i<100) 
+    {
+        int num1,num2,num3,max_num;
+        cin>>num1>>num2>>num3;
+        max_num=MAX(num1,num2,num3);  
+        if(max_num>=60)
+            sum=sum+max_num;
+        i++;
+    }
+    float avg=0.0;
+    avg+=sum/100;
+    cout<<avg<<endl;
+}
+
+
+词法分析结果如下：
+<       INT ,     int>
+<        ID ,     Max>
+< SEPARATOR ,       (>
+<       INT ,     int>
+<        ID ,      n1>
+< SEPARATOR ,       ,>
+<       INT ,     int>
+<        ID ,      n2>
+< SEPARATOR ,       ,>
+<       INT ,     int>
+<        ID ,      n3>
+< SEPARATOR ,       )>
+< SEPARATOR ,       {>
+<       INT ,     int>
+<        ID ,    temp>
+<    ASSIGN ,       =>
+<        ID ,      n1>
+< SEPARATOR ,       ;>
+<        IF ,      if>
+< SEPARATOR ,       (>
+<        ID ,      n2>
+<       GRE ,       >>
+<        ID ,    temp>
+< SEPARATOR ,       )>
+<        ID ,      n2>
+<    ASSIGN ,       =>
+<        ID ,    temp>
+< SEPARATOR ,       ;>
+<        IF ,      if>
+< SEPARATOR ,       (>
+<        ID ,      n3>
+<       GRE ,       >>
+<        ID ,    temp>
+< SEPARATOR ,       )>
+<        ID ,      n3>
+<    ASSIGN ,       =>
+<        ID ,    temp>
+< SEPARATOR ,       ;>
+<    RETURN ,  return>
+<        ID ,    temp>
+< SEPARATOR ,       ;>
+< SEPARATOR ,       }>
+<       INT ,     int>
+<      MAIN ,    main>
+< SEPARATOR ,       (>
+< SEPARATOR ,       )>
+< SEPARATOR ,       {>
+<       INT ,     int>
+<        ID ,       i>
+<    ASSIGN ,       =>
+<   INTEGER ,       0>
+< SEPARATOR ,       ;>
+<       INT ,     int>
+<        ID ,     sum>
+<    ASSIGN ,       =>
+<   INTEGER ,       0>
+< SEPARATOR ,       ;>
+<     WHILE ,   while>
+< SEPARATOR ,       (>
+<        ID ,       i>
+<       LSS ,       <>
+<   INTEGER ,     100>
+< SEPARATOR ,       )>
+< SEPARATOR ,       {>
+<       INT ,     int>
+<        ID ,    num1>
+< SEPARATOR ,       ,>
+<        ID ,    num2>
+< SEPARATOR ,       ,>
+<        ID ,    num3>
+< SEPARATOR ,       ,>
+<        ID , max_num>
+< SEPARATOR ,       ;>
+<       CIN ,     cin>
+<   ISTREAM ,      >>>
+<        ID ,    num1>
+<   ISTREAM ,      >>>
+<        ID ,    num2>
+<   ISTREAM ,      >>>
+<        ID ,    num3>
+< SEPARATOR ,       ;>
+<        ID , max_num>
+<    ASSIGN ,       =>
+<        ID ,     MAX>
+< SEPARATOR ,       (>
+<        ID ,    num1>
+< SEPARATOR ,       ,>
+<        ID ,    num2>
+< SEPARATOR ,       ,>
+<        ID ,    num3>
+< SEPARATOR ,       )>
+< SEPARATOR ,       ;>
+<        IF ,      if>
+< SEPARATOR ,       (>
+<        ID , max_num>
+<       GEQ ,      >=>
+<   INTEGER ,      60>
+< SEPARATOR ,       )>
+<        ID ,     sum>
+<    ASSIGN ,       =>
+<        ID ,     sum>
+<      PLUS ,       +>
+<        ID , max_num>
+< SEPARATOR ,       ;>
+<        ID ,       i>
+< INCREMENT ,      ++>
+< SEPARATOR ,       ;>
+< SEPARATOR ,       }>
+<     FLOAT ,   float>
+<        ID ,     avg>
+<    ASSIGN ,       =>
+<   DECIMAL ,     0.0>
+< SEPARATOR ,       ;>
+<        ID ,     avg>
+<  PLUSSIGN ,      +=>
+<        ID ,     sum>
+<       DIV ,       />
+<   INTEGER ,     100>
+< SEPARATOR ,       ;>
+<      COUT ,    cout>
+<   OSTREAM ,      <<>
+<        ID ,     avg>
+<   OSTREAM ,      <<>
+<        ID ,    endl>
+< SEPARATOR ,       ;>
+< SEPARATOR ,       }>

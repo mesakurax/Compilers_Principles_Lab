@@ -1,0 +1,22 @@
+预处理后代码:
+int a1;
+int b2;
+a1=5.;
+cout<<a1;
+
+
+词法分析结果如下：
+<       INT ,     int>
+<        ID ,      a1>
+< SEPARATOR ,       ;>
+<       INT ,     int>
+<        ID ,      b2>
+< SEPARATOR ,       ;>
+<        ID ,      a1>
+<    ASSIGN ,       =>
+Error!!!!!
+< SEPARATOR ,       ;>
+<      COUT ,    cout>
+<   OSTREAM ,      <<>
+<        ID ,      a1>
+< SEPARATOR ,       ;>

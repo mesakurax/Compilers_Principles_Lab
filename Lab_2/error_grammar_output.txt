@@ -1,0 +1,27 @@
+合并左公共因子:
+S -> iEtSA | a
+A -> eS | _
+E -> b
+
+
+消除左递归:
+S -> iEtSA | a
+A -> eS | _
+E -> b
+
+
+FIRST 集合:
+FIRST(S->iEtSA) = { i  }
+FIRST(A->_) = { _  }
+FIRST(S->a) = { a  }
+FIRST(A->eS) = { e  }
+FIRST(E->b) = { b  }
+
+
+FOLLOW 集合:
+FOLLOW(S) = { $  e  }
+FOLLOW(A) = { $  e  }
+FOLLOW(E) = { t  }
+
+
+该文法不是LL(1)文法！！！！
